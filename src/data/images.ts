@@ -1,0 +1,51 @@
+import hand from '@/assets/icons/hand.webp'
+import readyStudyGo from '@/assets/icons/READY_STUDY_GO.svg'
+import tick from '@/assets/icons/tick.webp'
+import tg from '@/assets/icons/tg.svg'
+import vk from '@/assets/icons/vk.svg'
+import tiktok from '@/assets/icons/tiktok.svg'
+import max from '@/assets/icons/max.svg'
+
+import dominica from '@/assets/images/dominica.webp'
+import galleryImg from '@/assets/images/gallery_img.webp'
+import galleryImg2 from '@/assets/images/gallery_img2.webp'
+import galleryImg3 from '@/assets/images/gallery_img3.webp'
+import game from '@/assets/images/game.webp'
+import group from '@/assets/images/group.jpg'
+import groupOfStudents from '@/assets/images/group_of_students.webp'
+import group2 from '@/assets/images/group2.png'
+import mascot from '@/assets/images/mascot.webp'
+import polaroid from '@/assets/images/polaroid.webp'
+import student from '@/assets/images/student.webp'
+import students from '@/assets/images/students.webp'
+import students2 from '@/assets/images/students2.webp'
+import students3 from '@/assets/images/students3.png'
+import ОченьКрутойЧувак from '@/assets/images/очень_крутой_чувак.png'
+
+export const icons = {
+  hand,
+  readyStudyGo,
+  tick,
+  tg,
+  vk,
+  tiktok,
+  max,
+}
+
+export const images = {
+  dominica,
+  galleryImg,
+  galleryImg2,
+  galleryImg3,
+  game,
+  group,
+  groupOfStudents,
+  group2,
+  mascot,
+  polaroid,
+  student,
+  students,
+  students2,
+  students3,
+  ОченьКрутойЧувак,
+}

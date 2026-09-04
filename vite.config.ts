@@ -1,20 +1,30 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
-import path from 'node:path'
+import AutoImport from 'unplugin-auto-import/vite'
 
 export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "styles/variables" as *;`,
-        loadPaths: [path.resolve(__dirname, 'src')],
+        additionalData: `@use "@/styles/variables" as *;`,
       },
     },
   },
-  plugins: [vue(), vueDevTools()],
+  plugins: [
+    vue(),
+    vueDevTools(),
+    AutoImport({
+      imports: [
+        {
+          '@/data/images': ['icons', 'images'],
+        },
+      ],
+      dts: 'src/auto-imports.d.ts',
+      vueTemplate: true,
+    }),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

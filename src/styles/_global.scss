@@ -1,5 +1,24 @@
+@use 'variables' as *;
+
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   color: $color-white;
   background-color: $color-dark;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: clamp(25px, 2.5vw, 40px);
+  line-height: clamp(20px, 3.5vw, 60px);
+
+  span {
+    color: $color-purple;
+  }
 }

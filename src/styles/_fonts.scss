@@ -12,6 +12,31 @@
 
 @font-face {
   font-family: 'Montserrat';
+  src: url('@/assets/fonts/Montserrat-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat';
   src: url('@/assets/fonts/Montserrat-Bold.ttf');
   font-weight: 700;
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: url('@/assets/fonts/Inter_28pt-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'TTFirsNeue';
+  src: url('@/assets/fonts/TTFirsNeue-Bold.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'TTFirsNeue';
+  src: url('@/assets/fonts/TTFirsNeue-Regular.woff2');
+  font-weight: 700;
+}
+

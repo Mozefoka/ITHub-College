@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 
 interface Props {
   images: string[]
@@ -12,17 +12,18 @@ const props = withDefaults(defineProps<Props>(), {
   interval: 3000,
 })
 
-// внутреннее состояние компонента — снаружи никак не управляется (uncontrolled)
-const currentIndex = ref(1) // 1, т.к. в начале стоит клон последнего слайда
+const currentIndex = ref(1)
 const isJumping = ref(false)
+const trackRef = ref<HTMLElement | null>(null)
+
 let timer: ReturnType<typeof setInterval> | null = null
 
-// [clone last, ...images, clone first] — приём для бесшовного loop
 const extendedImages = computed(() => {
-  if (props.images.length === 0) return []
-  const first = props.images[0]
-  const last = props.images[props.images.length - 1]
-  return [last, ...props.images, first]
+  if (props.images.length === 0) {
+    return []
+  }
+
+  return [props.images[props.images.length - 1], ...props.images, props.images[0]]
 })
 
 const trackStyle = computed(() => ({
@@ -30,35 +31,46 @@ const trackStyle = computed(() => ({
 }))
 
 function next(): void {
+  if (props.images.length <= 1) return
+
   currentIndex.value++
 }
 
-function onTransitionEnd(): void {
+async function onTransitionEnd(event: TransitionEvent): Promise<void> {
+  if (event.propertyName !== 'transform') return
+
   const total = props.images.length
 
-  if (currentIndex.value === total + 1) {
-    isJumping.value = true
-    currentIndex.value = 1
-  } else if (currentIndex.value === 0) {
-    isJumping.value = true
-    currentIndex.value = total
+  if (currentIndex.value !== total + 1) {
+    return
   }
 
-  if (isJumping.value) {
-    requestAnimationFrame(() => {
-      isJumping.value = false
-    })
-  }
+  isJumping.value = true
+  currentIndex.value = 1
+
+  await nextTick()
+
+  trackRef.value?.offsetHeight
+
+  requestAnimationFrame(() => {
+    isJumping.value = false
+  })
 }
 
 function play(): void {
-  if (!props.autoplay) return
+  if (!props.autoplay || props.images.length <= 1) {
+    return
+  }
+
   stop()
-  timer = setInterval(next, props.interval)
+
+  timer = setInterval(() => {
+    next()
+  }, props.interval)
 }
 
 function stop(): void {
-  if (timer) {
+  if (timer !== null) {
     clearInterval(timer)
     timer = null
   }
@@ -77,15 +89,16 @@ onBeforeUnmount(stop)
 </script>
 
 <template>
-  <div class="slider" @mouseenter="pause" @mouseleave="resume">
+  <div v-if="props.images.length" class="slider" @mouseenter="pause" @mouseleave="resume">
     <div
+      ref="trackRef"
       class="slider__track"
       :class="{ 'slider__track_no-transition': isJumping }"
       :style="trackStyle"
       @transitionend="onTransitionEnd"
     >
-      <div v-for="(image, i) in extendedImages" :key="i" class="slider__slide">
-        <img class="slider__img" :src="image" :alt="`slide-${i}`" />
+      <div v-for="(image, index) in extendedImages" :key="index" class="slider__slide">
+        <img class="slider__img" :src="image" :alt="`slide-${index}`" />
       </div>
     </div>
   </div>
@@ -93,32 +106,29 @@ onBeforeUnmount(stop)
 
 <style lang="scss" scoped>
 .slider {
-  position: relative;
-  overflow: hidden;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
+  overflow: hidden;
 
   &__track {
     display: flex;
-    height: 100%;
+    width: 100%;
     transition: transform 0.4s ease;
+  }
 
-    &_no-transition {
-      transition: none;
-    }
+  &__track_no-transition {
+    transition: none;
   }
 
   &__slide {
     flex: 0 0 100%;
-    height: 100%;
+    min-width: 0;
   }
 
   &__img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
   }
 }
 </style>

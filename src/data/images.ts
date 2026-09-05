@@ -1,3 +1,4 @@
+import badge from '@/assets/icons/badge.webp'
 import hand from '@/assets/icons/hand.webp'
 import readyStudyGo from '@/assets/icons/READY_STUDY_GO.svg'
 import tick from '@/assets/icons/tick.webp'
@@ -6,6 +7,7 @@ import vk from '@/assets/icons/vk.svg'
 import tiktok from '@/assets/icons/tiktok.svg'
 import max from '@/assets/icons/max.svg'
 
+import dino from '@/assets/images/dino.webp'
 import dominica from '@/assets/images/dominica.webp'
 import galleryImg from '@/assets/images/gallery_img.webp'
 import galleryImg2 from '@/assets/images/gallery_img2.webp'
@@ -23,6 +25,7 @@ import students3 from '@/assets/images/students3.png'
 import ОченьКрутойЧувак from '@/assets/images/очень_крутой_чувак.png'
 
 export const icons = {
+  badge,
   hand,
   readyStudyGo,
   tick,
@@ -33,6 +36,7 @@ export const icons = {
 }
 
 export const images = {
+  dino,
   dominica,
   galleryImg,
   galleryImg2,

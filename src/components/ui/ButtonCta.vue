@@ -30,7 +30,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 
   &--medium {
     padding: 17px 20px;
-    font-size: 15px;
+    font-size: clamp(12px, 1vw, 15px);
   }
 
   &--small {
@@ -56,14 +56,18 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 
     &:after {
       content: '';
-      width: 20px;
-      height: 20px;
-      padding-right: 30px;
+      width: 10px;
+      height: 10px;
       position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      background: url('@/assets/icons/btn-arrow.svg') no-repeat;
+      top: 52%;
+      right: 5px;
+      transform: translateY(-52%);
+      background: url('@/assets/icons/btn-arrow.svg') no-repeat center / 15px;
+
+      @media (max-width: 599px) {
+        right: unset;
+        padding-left: 20px;
+      }
     }
   }
 }

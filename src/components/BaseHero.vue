@@ -155,6 +155,7 @@ const tags: Tag[] = [
   }
 
   &__title {
+    font-family: 'TTFirsNeue', Arial, sans-serif;
     font-size: clamp(30px, 3vw, 50px);
     line-height: clamp(35px, 3vw, 60px);
     margin-bottom: 20px;

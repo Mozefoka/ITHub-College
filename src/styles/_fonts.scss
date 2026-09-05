@@ -30,13 +30,13 @@
 
 @font-face {
   font-family: 'TTFirsNeue';
-  src: url('@/assets/fonts/TTFirsNeue-Bold.woff2');
+  src: url('@/assets/fonts/TTFirsNeue-Bold.woff2') format('woff2');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'TTFirsNeue';
-  src: url('@/assets/fonts/TTFirsNeue-Regular.woff2');
+  src: url('@/assets/fonts/TTFirsNeue-Regular.woff2') format('woff2');
   font-weight: 700;
 }
 

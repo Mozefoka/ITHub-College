@@ -6,6 +6,8 @@ import tg from '@/assets/icons/tg.svg'
 import vk from '@/assets/icons/vk.svg'
 import tiktok from '@/assets/icons/tiktok.svg'
 import max from '@/assets/icons/max.svg'
+import psFlag from '@/assets/icons/ps-flag.svg'
+import ruFlag from '@/assets/icons/ru-flag.svg'
 
 import dino from '@/assets/images/dino.webp'
 import dominica from '@/assets/images/dominica.webp'
@@ -33,6 +35,8 @@ export const icons = {
   vk,
   tiktok,
   max,
+  psFlag,
+  ruFlag,
 }
 
 export const images = {

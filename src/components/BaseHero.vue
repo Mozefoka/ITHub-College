@@ -2,7 +2,7 @@
 import ButtonCta from '@/components/ui/ButtonCta.vue'
 import BaseSlider from '@/components/BaseSlider.vue'
 
-interface Tag {
+interface Tab {
   id: number
   name: string
 }
@@ -13,7 +13,7 @@ interface Video {
 
 const props = defineProps<Video>()
 
-const tags: Tag[] = [
+const tabs: Tab[] = [
   {
     id: 1,
     name: 'Информационная безопасность',
@@ -64,9 +64,9 @@ const tags: Tag[] = [
             </div>
           </div>
 
-          <ul class="hero__tags">
-            <li v-for="tag in tags" class="hero__tag" :key="tag.id">
-              <a href="#">{{ tag.name }}</a>
+          <ul class="hero__tabs">
+            <li v-for="tab in tabs" class="hero__tab" :key="tab.id">
+              <a href="#">{{ tab.name }}</a>
             </li>
           </ul>
         </div>
@@ -123,7 +123,7 @@ const tags: Tag[] = [
   }
 
   @media (max-width: 959px) {
-    padding: 20px 0;
+    padding: 20px 0 50px;
   }
 
   &__inner {
@@ -192,21 +192,23 @@ const tags: Tag[] = [
     }
   }
 
-  &__tags {
+  &__tabs {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
   }
 
-  &__tag {
+  &__tab {
     max-width: 340px;
     width: fit-content;
     padding: 10px;
     border-radius: 15px;
     line-height: 20px;
+    color: $color-white;
     background-color: $color-dark;
     text-transform: uppercase;
+    white-space: break-spaces;
   }
 
   &__gallery {

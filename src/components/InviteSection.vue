@@ -54,6 +54,8 @@ import ButtonCta from '@/components/ui/ButtonCta.vue'
 
 <style scoped lang="scss">
 .invite {
+  margin-bottom: 80px;
+
   &__ready {
     max-width: 1400px;
     margin: 50px auto 100px;

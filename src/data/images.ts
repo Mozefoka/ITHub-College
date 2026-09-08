@@ -8,6 +8,8 @@ import tiktok from '@/assets/icons/tiktok.svg'
 import max from '@/assets/icons/max.svg'
 import psFlag from '@/assets/icons/ps-flag.svg'
 import ruFlag from '@/assets/icons/ru-flag.svg'
+import star from '@/assets/icons/long-star.svg'
+import successStories from '@/assets/icons/success-stories-icon.svg'
 
 import dino from '@/assets/images/dino.webp'
 import dominica from '@/assets/images/dominica.webp'
@@ -25,7 +27,8 @@ import student from '@/assets/images/student.webp'
 import students from '@/assets/images/students.webp'
 import students2 from '@/assets/images/students2.webp'
 import students3 from '@/assets/images/students3.png'
-import ОченьКрутойЧувак from '@/assets/images/очень_крутой_чувак.png'
+import оченьКрутойЧувак from '@/assets/images/очень_крутой_чувак.png'
+import roman from '@/assets/images/roman.webp'
 
 export const icons = {
   badge,
@@ -38,6 +41,8 @@ export const icons = {
   max,
   psFlag,
   ruFlag,
+  star,
+  successStories,
 }
 
 export const images = {
@@ -57,5 +62,6 @@ export const images = {
   students,
   students2,
   students3,
-  ОченьКрутойЧувак,
+  оченьКрутойЧувак,
+  roman,
 }

@@ -3,6 +3,7 @@ import BaseHero from '@/components/BaseHero.vue'
 import CollegeInfo from '@/components/CollegeInfo.vue'
 import InviteSection from '@/components/InviteSection.vue'
 import BenefitsSection from '@/components/BenefitsSection.vue'
+import SuccessStories from '@/components/SuccessStories.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import BenefitsSection from '@/components/BenefitsSection.vue'
   <CollegeInfo />
   <InviteSection />
   <BenefitsSection />
+  <SuccessStories :star="icons.star"/>
 </template>
 
 <style lang="scss" scoped></style>

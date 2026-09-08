@@ -2,17 +2,15 @@
 interface ButtonProps {
   text: string
   size?: 'large' | 'medium' | 'small'
-  variant?: 'purple' | 'transparent'
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {
   size: 'medium',
-  variant: 'purple',
 })
 </script>
 
 <template>
-  <button class="button-cta" :class="[`button-cta--${props.size}`, `button-cta--${props.variant}`]">
+  <button class="button-cta" :class="[`button-cta--${props.size}`]">
     {{ props.text }}
   </button>
 </template>
@@ -22,6 +20,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   width: 100%;
   font-weight: 600;
   border-radius: 10px;
+  background-color: $color-purple;
   color: $color-white;
 
   &--large {
@@ -35,40 +34,6 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 
   &--small {
     padding: 12px 20px;
-  }
-
-  &--purple {
-    background-color: $color-purple;
-  }
-
-  &--transparent {
-    position: relative;
-    color: $color-black;
-    border: 1px solid $color-black;
-    background-color: transparent;
-    transition: $transition;
-    filter: invert(1);
-
-    &:hover {
-      filter: invert(0);
-      background-color: $color-white;
-    }
-
-    &:after {
-      content: '';
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      top: 52%;
-      right: 5px;
-      transform: translateY(-52%);
-      background: url('@/assets/icons/btn-arrow.svg') no-repeat center / 15px;
-
-      @media (max-width: 599px) {
-        right: unset;
-        padding-left: 20px;
-      }
-    }
   }
 }
 </style>

@@ -60,7 +60,7 @@ const tabs: Tab[] = [
             </div>
 
             <div class="hero__btn">
-              <ButtonCta text="КОНСУЛЬТАЦИЯ ПО ПОСТУПЛЕНИЮ" variant="transparent" />
+              <a href="#" class="link">КОНСУЛЬТАЦИЯ ПО ПОСТУПЛЕНИЮ</a>
             </div>
           </div>
 

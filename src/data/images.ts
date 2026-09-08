@@ -20,6 +20,7 @@ import groupOfStudents from '@/assets/images/group_of_students.webp'
 import group2 from '@/assets/images/group2.png'
 import mascot from '@/assets/images/mascot.webp'
 import polaroid from '@/assets/images/polaroid.webp'
+import polaroid2 from '@/assets/images/polaroid2.webp'
 import student from '@/assets/images/student.webp'
 import students from '@/assets/images/students.webp'
 import students2 from '@/assets/images/students2.webp'
@@ -51,6 +52,7 @@ export const images = {
   group2,
   mascot,
   polaroid,
+  polaroid2,
   student,
   students,
   students2,

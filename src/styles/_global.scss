@@ -22,10 +22,45 @@ img {
 .title {
   font-weight: 600;
   font-size: clamp(25px, 2.5vw, 40px);
-  line-height: clamp(20px, 3.5vw, 60px);
+  line-height: clamp(40px, 3.5vw, 60px);
   text-transform: uppercase;
 
   span {
     color: $color-purple;
+  }
+}
+
+.link {
+  width: 100%;
+  font-weight: 600;
+  border-radius: 10px;
+  position: relative;
+  padding: 17px 20px;
+  color: $color-black;
+  border: 1px solid $color-black;
+  background-color: transparent;
+  transition: $transition;
+  text-align: center;
+  filter: invert(1);
+
+  &:hover {
+    filter: invert(0);
+    background-color: $color-white;
+  }
+
+  &:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 52%;
+    padding-left: 15px;
+    transform: translateY(-52%);
+    background: url('@/assets/icons/btn-arrow.svg') no-repeat center / 15px;
+
+    @media (max-width: 599px) {
+      right: unset;
+      padding-left: 20px;
+    }
   }
 }

@@ -6,10 +6,11 @@ import tg from '@/assets/icons/tg.svg'
 import vk from '@/assets/icons/vk.svg'
 import tiktok from '@/assets/icons/tiktok.svg'
 import max from '@/assets/icons/max.svg'
-import psFlag from '@/assets/icons/ps-flag.svg'
-import ruFlag from '@/assets/icons/ru-flag.svg'
-import star from '@/assets/icons/long-star.svg'
-import successStories from '@/assets/icons/success-stories-icon.svg'
+import arrowRight from '@/assets/icons/arrow_right.svg'
+import psFlag from '@/assets/icons/ps_flag.svg'
+import ruFlag from '@/assets/icons/ru_flag.svg'
+import star from '@/assets/icons/long_star.svg'
+import successStories from '@/assets/icons/success_stories_icon.svg'
 
 import dino from '@/assets/images/dino.webp'
 import dominica from '@/assets/images/dominica.webp'
@@ -39,6 +40,7 @@ export const icons = {
   vk,
   tiktok,
   max,
+  arrowRight,
   psFlag,
   ruFlag,
   star,

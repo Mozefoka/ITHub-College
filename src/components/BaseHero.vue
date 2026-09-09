@@ -9,6 +9,7 @@ interface Tab {
 
 interface Video {
   video: string
+  type: 'video' | 'iframe'
 }
 
 const props = defineProps<Video>()
@@ -91,7 +92,7 @@ const tabs: Tab[] = [
 
           <div class="hero__gallery-video">
             <video
-              v-if="props.video.endsWith('.mp4')"
+              v-if="props.type === 'video'"
               class="hero__gallery-video-item"
               :src="props.video"
               autoplay
@@ -300,10 +301,10 @@ const tabs: Tab[] = [
       bottom: -80px;
       width: 100%;
       height: 100px;
-      background: url('@/assets/icons/star.svg') no-repeat center / contain;
+      background: url('@/assets/icons/long_star.svg') no-repeat center / contain;
 
       @media (max-width: 959px) {
-        background: url('@/assets/icons/star.svg') no-repeat right / contain;
+        background: url('@/assets/icons/long_star.svg') no-repeat right / contain;
       }
 
       @media (max-width: 599px) {

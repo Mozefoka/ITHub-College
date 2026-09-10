@@ -14,9 +14,16 @@ import successStories from '@/assets/icons/success_stories_icon.svg'
 
 import dino from '@/assets/images/dino.webp'
 import dominica from '@/assets/images/dominica.webp'
-import galleryImg from '@/assets/images/gallery_img.webp'
-import galleryImg2 from '@/assets/images/gallery_img2.webp'
-import galleryImg3 from '@/assets/images/gallery_img3.webp'
+import galleryImg1 from '@/assets/images/gallery_img1.png'
+import galleryImg2 from '@/assets/images/gallery_img2.png'
+import galleryImg3 from '@/assets/images/gallery_img3.png'
+import galleryImg4 from '@/assets/images/gallery_img4.png'
+import galleryImg5 from '@/assets/images/gallery_img5.png'
+import galleryImg6 from '@/assets/images/gallery_img6.png'
+import galleryImg7 from '@/assets/images/gallery_img7.png'
+import galleryImg8 from '@/assets/images/gallery_img8.png'
+import galleryImg9 from '@/assets/images/gallery_img9.png'
+import galleryImg10 from '@/assets/images/gallery_img10.png'
 import game from '@/assets/images/game.webp'
 import group from '@/assets/images/group.jpg'
 import groupOfStudents from '@/assets/images/group_of_students.webp'
@@ -50,9 +57,16 @@ export const icons = {
 export const images = {
   dino,
   dominica,
-  galleryImg,
+  galleryImg1,
   galleryImg2,
   galleryImg3,
+  galleryImg4,
+  galleryImg5,
+  galleryImg6,
+  galleryImg7,
+  galleryImg8,
+  galleryImg9,
+  galleryImg10,
   game,
   group,
   groupOfStudents,

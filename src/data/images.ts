@@ -10,6 +10,7 @@ import arrowRight from '@/assets/icons/arrow_right.svg'
 import psFlag from '@/assets/icons/ps_flag.svg'
 import ruFlag from '@/assets/icons/ru_flag.svg'
 import star from '@/assets/icons/long_star.svg'
+import gamepad from '@/assets/icons/gamepad.webp'
 import successStories from '@/assets/icons/success_stories_icon.svg'
 
 import dino from '@/assets/images/dino.webp'
@@ -35,8 +36,8 @@ import student from '@/assets/images/student.webp'
 import students from '@/assets/images/students.webp'
 import students2 from '@/assets/images/students2.webp'
 import students3 from '@/assets/images/students3.png'
-import оченьКрутойЧувак from '@/assets/images/очень_крутой_чувак.png'
 import roman from '@/assets/images/roman.webp'
+import оченьКрутойЧувак from '@/assets/images/очень_крутой_чувак.png'
 
 export const icons = {
   badge,
@@ -51,6 +52,7 @@ export const icons = {
   psFlag,
   ruFlag,
   star,
+  gamepad,
   successStories,
 }
 

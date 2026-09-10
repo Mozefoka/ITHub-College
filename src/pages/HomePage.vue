@@ -6,6 +6,7 @@ import BenefitsSection from '@/components/BenefitsSection.vue'
 import SuccessStories from '@/components/SuccessStories.vue'
 import PracticeSection from '@/components/PracticeSection.vue'
 import GallerySection from '@/components/GallerySection.vue'
+import StudyDirections from '@/components/StudyDirections.vue'
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import GallerySection from '@/components/GallerySection.vue'
   <SuccessStories :star="icons.star"/>
   <PracticeSection />
   <GallerySection />
+  <StudyDirections />
 </template>
 
 <style lang="scss" scoped></style>

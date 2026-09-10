@@ -26,6 +26,7 @@
 .gallery {
   overflow-x: auto;
   overscroll-behavior-x: contain;
+  margin-bottom: 50px;
 
   &__inner {
     max-width: 1625px;

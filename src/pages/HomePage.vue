@@ -7,6 +7,7 @@ import SuccessStories from '@/components/SuccessStories.vue'
 import PracticeSection from '@/components/PracticeSection.vue'
 import GallerySection from '@/components/GallerySection.vue'
 import StudyDirections from '@/components/StudyDirections.vue'
+import ProfessionDirections from '@/components/ProfessionDirections.vue'
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import StudyDirections from '@/components/StudyDirections.vue'
   <PracticeSection />
   <GallerySection />
   <StudyDirections />
+  <ProfessionDirections />
 </template>
 
 <style lang="scss" scoped></style>

@@ -107,7 +107,7 @@ const cards: Card[] = [
     <div class="container">
       <div class="directions__top">
         <h2 class="directions__top-title title">Что <span>можно изучать</span> в IThub?</h2>
-        <p class="directions__top-subtitle">5 направлений с реальными бизнес-ролями и государственным дипломом</p>
+        <p class="directions__top-subtitle subtitle">5 направлений с реальными бизнес-ролями и государственным дипломом</p>
       </div>
 
       <div class="directions__grid">
@@ -186,9 +186,6 @@ const cards: Card[] = [
   &__top-subtitle {
     max-width: 399px;
     margin: 0 auto;
-    font-weight: 600;
-    line-height: 20px;
-    color: $color-light-gray;
   }
 
   &__grid {

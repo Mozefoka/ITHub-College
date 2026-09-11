@@ -30,6 +30,12 @@ img {
   }
 }
 
+.subtitle {
+  font-weight: 600;
+  line-height: 20px;
+  color: $color-light-gray;
+}
+
 .link {
   width: 100%;
   font-weight: 600;
@@ -56,7 +62,7 @@ img {
     top: 52%;
     padding-left: 15px;
     transform: translateY(-52%);
-    background: url('@/assets/icons/btn-arrow.svg') no-repeat center / 15px;
+    background: url('@/assets/icons/btn_arrow.svg') no-repeat center / 15px;
 
     @media (max-width: 599px) {
       right: unset;

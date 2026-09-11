@@ -9,6 +9,7 @@ import GallerySection from '@/components/GallerySection.vue'
 import StudyDirections from '@/components/StudyDirections.vue'
 import ProfessionDirections from '@/components/ProfessionDirections.vue'
 import StudentHelp from '@/components/StudentHelp.vue'
+import EnrollSection from '@/components/EnrollSection.vue'
 </script>
 
 <template>
@@ -22,6 +23,7 @@ import StudentHelp from '@/components/StudentHelp.vue'
   <StudyDirections />
   <ProfessionDirections />
   <StudentHelp />
+  <EnrollSection />
 </template>
 
 <style lang="scss" scoped></style>

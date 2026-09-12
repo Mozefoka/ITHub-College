@@ -12,6 +12,7 @@ import ruFlag from '@/assets/icons/ru_flag.svg'
 import star from '@/assets/icons/long_star.svg'
 import gamepad from '@/assets/icons/gamepad.webp'
 import successStories from '@/assets/icons/success_stories_icon.svg'
+import ava from '@/assets/icons/ava.webp'
 
 import dino from '@/assets/images/dino.webp'
 import dominica from '@/assets/images/dominica.webp'
@@ -54,6 +55,7 @@ export const icons = {
   star,
   gamepad,
   successStories,
+  ava,
 }
 
 export const images = {

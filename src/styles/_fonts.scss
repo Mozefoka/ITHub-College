@@ -35,6 +35,13 @@
 }
 
 @font-face {
+  font-family: 'Inter';
+  src: url('@/assets/fonts/Inter_28pt-Medium.ttf');
+  font-weight: 500;
+}
+
+
+@font-face {
   font-family: 'TTFirsNeue';
   src: url('@/assets/fonts/TTFirsNeue-Bold.woff2') format('woff2');
   font-weight: 400;

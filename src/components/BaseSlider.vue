@@ -31,7 +31,7 @@ const trackStyle = computed(() => ({
 }))
 
 function next(): void {
-  if (props.images.length <= 1) return
+  if (props.images.length <= 1 || isJumping.value) return
 
   currentIndex.value++
 }
@@ -41,7 +41,7 @@ async function onTransitionEnd(event: TransitionEvent): Promise<void> {
 
   const total = props.images.length
 
-  if (currentIndex.value !== total + 1) {
+  if (currentIndex.value <= total) {
     return
   }
 
@@ -84,8 +84,23 @@ function resume(): void {
   play()
 }
 
-onMounted(play)
-onBeforeUnmount(stop)
+function handleVisibilityChange(): void {
+  if (document.hidden) {
+    stop()
+  } else {
+    resume()
+  }
+}
+
+onMounted(() => {
+  play()
+  document.addEventListener('visibilitychange', handleVisibilityChange)
+})
+
+onBeforeUnmount(() => {
+  stop()
+  document.removeEventListener('visibilitychange', handleVisibilityChange)
+})
 </script>
 
 <template>

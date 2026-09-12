@@ -33,7 +33,8 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   }
 
   &--small {
-    padding: 12px 20px;
+    padding: 10px;
+    font-weight: 700;
   }
 }
 </style>

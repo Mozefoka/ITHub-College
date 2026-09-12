@@ -33,6 +33,8 @@
 
 <style scoped lang="scss">
 .vibe {
+  margin-bottom: 100px;
+
   &__inner {
     display: flex;
     flex-direction: column;

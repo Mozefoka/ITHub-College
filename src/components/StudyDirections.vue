@@ -202,6 +202,10 @@ const cards: Card[] = [
     display: flex;
     border-radius: 15px;
     background: $color-dark;
+
+      @media (max-width: 479px) {
+        flex-direction: column;
+      }
   }
 
   &__content {
@@ -286,6 +290,15 @@ const cards: Card[] = [
     max-width: 260px;
     border-radius: 15px;
     background: var(--accent);
+
+    @media (max-width: 479px) {
+      max-width: 100%;
+      max-height: 450px;
+
+      img {
+        object-fit: contain;
+      }
+    }
   }
 }
 </style>

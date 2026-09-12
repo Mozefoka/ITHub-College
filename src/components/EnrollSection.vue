@@ -52,6 +52,8 @@ const steps: Step[] = [
 
 <style scoped lang="scss">
 .enroll {
+  margin-bottom: 100px;
+
   &__header {
     max-width: 515px;
     margin: 0 auto 30px;

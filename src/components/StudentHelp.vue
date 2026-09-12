@@ -40,6 +40,10 @@
     align-items: center;
   }
 
+  &__title {
+    margin-bottom: 20px;
+  }
+
   &__content {
     display: grid;
     grid-template-columns: 1.2fr 1.2fr 2fr;

@@ -10,6 +10,7 @@ import StudyDirections from '@/components/StudyDirections.vue'
 import ProfessionDirections from '@/components/ProfessionDirections.vue'
 import StudentHelp from '@/components/StudentHelp.vue'
 import EnrollSection from '@/components/EnrollSection.vue'
+import VibeSection from '@/components/VibeSection.vue'
 </script>
 
 <template>
@@ -24,6 +25,7 @@ import EnrollSection from '@/components/EnrollSection.vue'
   <ProfessionDirections />
   <StudentHelp />
   <EnrollSection />
+  <VibeSection />
 </template>
 
 <style lang="scss" scoped></style>
